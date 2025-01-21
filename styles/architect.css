@@ -130,11 +130,33 @@ main > section{
     max-width: 540px;
 }
 
+/* sponsor */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
 /* responsive */
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 880px) {
     .navbar,
     .nav-links,
     .teams{
         flex-direction: column;
+    }
+    .facts-container,
+    .sponsor-companies{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .sponsor-companies{
+        gap: 24px;
     }
 }
